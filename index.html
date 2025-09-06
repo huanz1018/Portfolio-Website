@@ -9,22 +9,223 @@
 </head>
 <body>
   <nav class="navbar">
-    <div class="nav-brand">UX/UI Designer</div>
     <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#past-projects">Past Projects</a>
-      <a href="#current-projects">Current Projects</a>
       <div class="social-icons">
-        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="#" title="Gmail"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.instagram.com/huans_corner/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/huanzhang0405" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:huanz@umich.edu" title="Email"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </nav>
   
   <section class="hero">
+    <p class="name-subheader"></p>
     <h1>Huan Zhang</h1>
-    <p class="subheader">bettering the future one design at a time</p>
+    <p class="subheader">is an aspiring UX designer with a 
+      background in statistics, computer science, environmental science, and art. 
+      Welcome to her portfolio where you will find a collection of her work and 
+      insights into her design process!
+    </p>
+    <a href="#about" class="explore-btn">Start Exploring</a>
   </section>
+
+  <section id="about" class="section about-section">
+    <div class="section-content about-content">
+      <div class="about-image-container">
+        <div class="cute-frame">
+          <img src="./image/About Me Picture.jpg" alt="About Me" class="about-image">
+        </div>
+      </div>
+      <div class="about-text">
+        <h2>About</h2>
+        <p>Hi, my name is Huan, like Prince Hans from Frozen but without the 'S', and I am a sophomore
+          studying at the University of Michigan at Ann Arbor. To my friends, I am an empathetic listener who 
+          loves to be dramatic about yummy food, exploring new places, and ending rants with a positive note (glass half full mentality!). 
+          To my family, I am a caring daughter of two immigrant Chinese parents who have always supported my dreams. But to me, I am an anomaly, born 
+          to love both the beautiful world of art and the technical logic of math and science.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="past-projects" class="section">
+    <div class="section-content">
+      <h2>Past Projects</h2>
+      
+      <!-- Sierra Club Section -->
+      <div class="project-section-full">
+        <h3>Sierra Club</h3>
+        <p>As Digital Media Chair for Sierra Club at University of Michigan, I managed and enhanced the organization's online presence through strategic digital content creation and website management.</p>
+        
+        <div class="project-content">
+          <div class="project-image">
+            <img src="./image/Website Sneak Peek.png" alt="Sierra Club Website Preview" class="project-img">
+          </div>
+          
+          <div class="project-links">
+            <a href="https://sierraclubatumich.wordpress.com/" target="_blank" class="website-link">
+              <i class="fas fa-external-link-alt"></i> Visit Website
+            </a>
+          </div>
+        </div>
+        
+        <div class="media-designs-section">
+          <h4>Media Designs</h4>
+          <div class="image-gallery">
+            <div class="gallery-container">
+              <button class="gallery-nav prev" onclick="changeImage(-1)">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              
+              <div class="gallery-images">
+                <img src="./image/meet-eboard-1.png" alt="Meet the Eboard Design 1" class="gallery-img active">
+                <img src="./image/meet-eboard-2.png" alt="Meet the Eboard Design 2" class="gallery-img">
+                <img src="./image/meet-eboard-3.png" alt="Meet the Eboard Design 3" class="gallery-img">
+                <img src="./image/meet-eboard-4.png" alt="Meet the Eboard Design 4" class="gallery-img">
+                <img src="./image/meet-eboard-5.png" alt="Meet the Eboard Design 5" class="gallery-img">
+                <img src="./image/meet-eboard-6.png" alt="Meet the Eboard Design 6" class="gallery-img">
+              </div>
+              
+              <button class="gallery-nav next" onclick="changeImage(1)">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+            
+            <div class="gallery-indicators">
+              <span class="indicator active" onclick="currentImage(1)"></span>
+              <span class="indicator" onclick="currentImage(2)"></span>
+              <span class="indicator" onclick="currentImage(3)"></span>
+              <span class="indicator" onclick="currentImage(4)"></span>
+              <span class="indicator" onclick="currentImage(5)"></span>
+              <span class="indicator" onclick="currentImage(6)"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Artwork Section -->
+      <div class="project-section-full artwork-section">
+        <h3>Artwork</h3>
+        <p>A collection of my artistic creations showcasing various painting techniques and creative expressions.</p>
+        
+        <div class="artwork-gallery-section">
+          <div class="artwork-gallery">
+            <div class="gallery-container">
+              <button class="gallery-nav prev" onclick="changeArtworkImage(-1)">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              
+              <div class="gallery-images artwork-images">
+                <img src="./image/paint1.jpg" alt="Artwork 1" class="gallery-img artwork-gallery-img active">
+                <img src="./image/paint2.JPG" alt="Artwork 2" class="gallery-img artwork-gallery-img">
+                <img src="./image/paint3.JPG" alt="Artwork 3" class="gallery-img artwork-gallery-img">
+                <img src="./image/paint4.jpg" alt="Artwork 4" class="gallery-img artwork-gallery-img">
+                <img src="./image/paint5.jpg" alt="Artwork 5" class="gallery-img artwork-gallery-img">
+                <img src="./image/paint6.JPG" alt="Artwork 6" class="gallery-img artwork-gallery-img">
+                <img src="./image/paint7.jpg" alt="Artwork 7" class="gallery-img artwork-gallery-img">
+              </div>
+              
+              <button class="gallery-nav next" onclick="changeArtworkImage(1)">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+            
+            <div class="gallery-indicators artwork-indicators">
+              <span class="indicator active" onclick="currentArtworkImage(1)"></span>
+              <span class="indicator" onclick="currentArtworkImage(2)"></span>
+              <span class="indicator" onclick="currentArtworkImage(3)"></span>
+              <span class="indicator" onclick="currentArtworkImage(4)"></span>
+              <span class="indicator" onclick="currentArtworkImage(5)"></span>
+              <span class="indicator" onclick="currentArtworkImage(6)"></span>
+              <span class="indicator" onclick="currentArtworkImage(7)"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="current-projects" class="section">
+    <div class="section-content">
+      <h2>Current Projects</h2>
+      <p>Discover what I'm currently working on. These ongoing projects represent my latest explorations in design and user experience.</p>
+    </div>
+  </section>
+
+<script>
+// Sierra Club Gallery
+let currentImageIndex = 0;
+const images = document.querySelectorAll('.gallery-images:not(.artwork-images) .gallery-img');
+const indicators = document.querySelectorAll('.gallery-indicators:not(.artwork-indicators) .indicator');
+
+function showImage(index) {
+  // Hide all images
+  images.forEach(img => img.classList.remove('active'));
+  indicators.forEach(ind => ind.classList.remove('active'));
+  
+  // Show current image
+  images[index].classList.add('active');
+  indicators[index].classList.add('active');
+}
+
+function changeImage(direction) {
+  currentImageIndex += direction;
+  
+  if (currentImageIndex >= images.length) {
+    currentImageIndex = 0;
+  } else if (currentImageIndex < 0) {
+    currentImageIndex = images.length - 1;
+  }
+  
+  showImage(currentImageIndex);
+}
+
+function currentImage(index) {
+  currentImageIndex = index - 1;
+  showImage(currentImageIndex);
+}
+
+// Artwork Gallery
+let currentArtworkIndex = 0;
+const artworkImages = document.querySelectorAll('.artwork-images .artwork-gallery-img');
+const artworkIndicators = document.querySelectorAll('.artwork-indicators .indicator');
+
+function showArtworkImage(index) {
+  // Hide all artwork images
+  artworkImages.forEach(img => img.classList.remove('active'));
+  artworkIndicators.forEach(ind => ind.classList.remove('active'));
+  
+  // Show current artwork image
+  artworkImages[index].classList.add('active');
+  artworkIndicators[index].classList.add('active');
+}
+
+function changeArtworkImage(direction) {
+  currentArtworkIndex += direction;
+  
+  if (currentArtworkIndex >= artworkImages.length) {
+    currentArtworkIndex = 0;
+  } else if (currentArtworkIndex < 0) {
+    currentArtworkIndex = artworkImages.length - 1;
+  }
+  
+  showArtworkImage(currentArtworkIndex);
+}
+
+function currentArtworkImage(index) {
+  currentArtworkIndex = index - 1;
+  showArtworkImage(currentArtworkIndex);
+}
+
+// Add keyboard navigation
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'ArrowLeft') {
+    changeImage(-1);
+  } else if (event.key === 'ArrowRight') {
+    changeImage(1);
+  }
+});
+</script>
+
 </body>
 </html>

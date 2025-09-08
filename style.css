@@ -221,6 +221,16 @@ body {
   background-color: #ffffff;
 }
 
+/* Override section backgrounds for specific sections */
+#current-projects.section {
+  background-image: url("./image/Landing Page3.jpg") !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  background-color: transparent !important;
+}
+
 /* About Section Specific Styling */
 .about-section {
   background: url('./image/Landing\ Page3.jpg') no-repeat center center fixed;
@@ -263,6 +273,51 @@ body {
 
 .about-image-container {
   flex: 0 0 300px;
+}
+
+@media (max-width: 1200px) {
+  .about-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 95vw;
+  }
+  .about-image-container {
+    width: 100%;
+    flex: none;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+  .about-image {
+    width: 90vw;
+    max-width: 350px;
+    height: auto;
+    min-height: 200px;
+  }
+  .about-text {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-content {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .about-image {
+    max-width: 95vw;
+    min-height: 120px;
+    height: auto;
+  }
+  .about-text {
+    font-size: 1rem;
+  }
+  .about-section h2 {
+    font-size: 2rem !important;
+  }
 }
 
 .cute-frame {
@@ -365,6 +420,54 @@ html {
 
 #past-projects h2 {
   color: white;
+}
+
+/* Current Projects Section Styling */
+#current-projects {
+  background-color: transparent !important; /* override .section nth-child backgrounds */
+  color: white;
+  position: relative;
+  z-index: 0; /* create stacking context for ::before/::after */
+}
+
+#current-projects::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* Background image layer */
+#current-projects::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("./image/Landing Page3.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 0; /* behind overlay and content */
+}
+
+#current-projects .section-content {
+  position: relative;
+  z-index: 2;
+}
+
+#current-projects h2 {
+  color: white !important;
+}
+
+#current-projects p {
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .projects-container {

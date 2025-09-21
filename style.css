@@ -59,6 +59,24 @@ body {
 .nav-right {
   justify-self: end;
 }
+.nav-right a {
+  text-decoration: none;
+  color: #3d2914;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.8rem 1rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+.nav-right a:hover {
+  color: #2a1c0f;
+  background: rgba(255, 255, 255, 0.1);
+}
+.nav-right a::after {
+  content: '';
+  position: absolute;
   bottom: 4px;
   left: 1rem;
   right: 1rem;
